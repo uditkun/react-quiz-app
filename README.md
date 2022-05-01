@@ -1,6 +1,6 @@
 # React Quiz App
 
-A simple quiz app made using [React.js](https://reactjs.org), [React-Router](https://reactrouter.com), [Tailwind CSS](https://tailwindcss.com), [Vite](https://vitejs.dev), [OpenDBTrivia API](https://opentdb.com)
+A simple quiz app made using [React.js](https://reactjs.org), [React-Router](https://reactrouter.com), [Tailwind CSS](https://tailwindcss.com), [Vite](https://vitejs.dev), [OpenDBTrivia API](https://opentdb.com), [React-Query](https://react-query.tanstack.com)
 
 ### Features:
 

@@ -2,6 +2,7 @@
   "name": "react-query-quiz",
   "private": true,
   "version": "0.0.0",
+  "licence": "MIT",
   "scripts": {
     "deploy": "npm run build && gh-pages -d dist",
     "dev": "vite",
@@ -9,14 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mui/icons-material": "^5.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-query": "^3.34.19",
     "react-router-dom": "^6.2.2"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.0",
     "@vitejs/plugin-react": "^1.0.7",
     "autoprefixer": "^10.4.4",
     "gh-pages": "^3.2.3",

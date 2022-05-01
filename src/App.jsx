@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import quizImg from "./quiz-img.jpg";
-import { useQueryClient } from "react-query";
 
 function App() {
-  const queryClient = useQueryClient();
   return (
     <>
       <div className=" flex flex-col justify-center content-around sm:flex-row sm:justify-around sm:items-center p-4 h-[calc(100vh_-_85px)]">
@@ -18,13 +16,7 @@ function App() {
             </p>
           </div>
           <Link to="/quiz">
-            <button
-              className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white cursor-pointer rounded"
-              onClick={
-                queryClient.getQueryData("questions") &&
-                queryClient.invalidateQueries("questions")
-              }
-            >
+            <button className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white cursor-pointer rounded">
               Start Quiz
             </button>
           </Link>

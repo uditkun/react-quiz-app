@@ -7,17 +7,17 @@ function FAQs() {
       </p>
 
       <p className="underline pb-2">The basic flow is:-</p>
-      <ol>
-        <li>1) Select a category/ select any category and difficulty.</li>
+      <ol className="list-decimal">
+        <li>Select a category/ select any category and difficulty.</li>
         <li>
-          2) Quiz will be generated, answer the questions of the generated quiz,
+          Quiz will be generated, answer the questions of the generated quiz,
           review and submit.
         </li>
         <li>
-          3) Results will be generated, check your scores and answers to
-          attempted questions.
+          Results will be generated, check your scores and answers to attempted
+          questions.
         </li>
-        <li>4) Have fun.</li>
+        <li>Have fun.</li>
       </ol>
     </div>
   );

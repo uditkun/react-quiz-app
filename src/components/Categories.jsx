@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Error404 from "./Error404";
 import { getCategories } from "./AsyncRequests";
+import { useQueryClient } from "react-query";
 
 function Categories({ changePage, getFullData }) {
+  const queryClient = useQueryClient();
   const [formData, setFormData] = useState({
     category: "",
     difficulty: "",
@@ -12,7 +14,7 @@ function Categories({ changePage, getFullData }) {
     e.preventDefault();
     // console.log(formData);
     getFullData(formData);
-    console.log("Form Submitted");
+    // console.log("Form Submitted");
     changePage();
   };
 
@@ -76,6 +78,10 @@ function Categories({ changePage, getFullData }) {
         <button
           type="submit"
           className="mt-4 px-4 py-2 rounded bg-green-500 text-white hover:bg-green-600"
+          onClick={() => {
+            queryClient.getQueryData("questions") &&
+              queryClient.invalidateQueries("questions");
+          }}
         >
           Start Quiz
         </button>

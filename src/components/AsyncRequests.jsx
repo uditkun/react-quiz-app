@@ -18,7 +18,7 @@ export function getCategories() {
 export const getQuestions = (argument) => {
   const { category, difficulty } = argument;
   const { data: userCategoryData } = getCategories();
-  console.log(userCategoryData);
+  // console.log(userCategoryData);
   const id =
     category === ""
       ? ""
@@ -27,7 +27,7 @@ export const getQuestions = (argument) => {
         )?.id;
 
   const fetchQuestions = async () => {
-    console.log(id, difficulty);
+    // console.log(id, difficulty);
     const questions = await fetch(
       `https://opentdb.com/api.php?amount=10&category=${id}&difficulty=${difficulty}`
     );
@@ -35,7 +35,7 @@ export const getQuestions = (argument) => {
     //   `https://opentdb.com/api.php?amount=10&category=${id}&difficulty=${difficulty}`
     // );
     const questionsData = await questions.json();
-    console.log(questionsData);
+    // console.log(questionsData);
     return questionsData;
   };
 

@@ -18,6 +18,16 @@ function Quiz() {
     setPageOrder((pageOrder) => pageOrder + 1);
   };
 
+  // useEffect(() => {
+  //   if (localStorage.getItem("data") != null) {
+  //     setData(JSON.parse(localStorage.getItem("data")));
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   localStorage.setItem("data", JSON.stringify(data));
+  // }, [data]);
+
   switch (pageOrder) {
     case 1: {
       return (

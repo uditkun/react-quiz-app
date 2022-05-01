@@ -102,8 +102,9 @@ function QuestionSection({ changePage, data }) {
               <li
                 className={`p-2 ml-3 w-full sm:w-3/4 lg:w-1/3 mb-4 border-2 rounded cursor-pointer
                   ${
-                    userAnswer?.[userAnswer.length - 1]?.userAnswer === elem &&
-                    "bg-green-500 text-white"
+                    userAnswer
+                      ?.filter((element) => element?.count === count + 1)
+                      .at(-1)?.userAnswer === elem && "bg-green-500 text-white"
                   }`}
                 key={count + index}
                 onClick={(e) => getUserOption(e)}
@@ -133,7 +134,7 @@ function QuestionSection({ changePage, data }) {
             Next
           </button>
         </div>
-        {count >= 9 && (
+        {userAnswer?.find((element) => element?.count === 10) !== undefined && (
           <button
             className="px-4 py-1 bg-red-500 text-white rounded hover:bg-red-700"
             onClick={() => {

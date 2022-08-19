@@ -16,4 +16,4 @@ A simple quiz app made using [React.js](https://reactjs.org), [React-Router](htt
 
 Note - This is a demo app and currently lacks functionalities like caching and authentication.
 
-The app is hosted [here](https://celebrated-empanada-64c7d1.netlify.app/about) on [netlify](https://netlify.com).
+The app is hosted [here](https://celebrated-empanada-64c7d1.netlify.app) on [netlify](https://netlify.com).
